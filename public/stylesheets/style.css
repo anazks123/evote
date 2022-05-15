@@ -1,0 +1,126 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.addCandidates{
+  border: 2px solid black;
+  width: 380px;
+  position: fixed;
+}
+.form{
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.form2{
+  margin-top: 10px;
+
+}
+.tables{
+  margin-top: 500px;
+}
+.male{
+  width: 100%;
+  height: 70px;
+  background-color: #00B7FF;
+  margin-top: 70px;
+}
+.mainBox{
+  background-color:cadetblue;
+  width: 80%;
+  height: 400px;
+  margin-top: 90px;
+  margin-left: 120px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.imgVote{
+  width: 300px;
+  margin-left: 350px;
+  height: 300px;
+  border: 1ps solid black;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  color: #fff;
+  background: rgb(6, 147, 232);
+  background: linear-gradient(
+    90deg,
+    rgba(6, 147, 232, 1) 38%,
+    rgba(0, 112, 255, 1) 79%
+  );
+} */
+
+input {
+  border: 2px solid #000;
+  border-color: #fff;
+  transition: 1s;
+}
+
+input:hover {
+  border-color: rgb(40, 42, 43);
+}
+
+#app h1 {
+  font-size: 48px;
+  transition: 1s;
+  cursor: default;
+}
+
+#app h1:hover {
+  color: rgb(40, 42, 43);
+  color: linear-gradient(90deg, rgb(0, 0, 0) 38%, rgbrgb(0, 0, 0) %);
+}
+
+input {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.output {
+  border: 1px solid #222;
+  padding: 30px 15px;
+  background-color: #0006;
+}
+
+#footer {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 0 35px;
+  background-color: #fff;
+  box-shadow: 0 2px 23px 0 rgba(0, 0, 0, 0.1), 0 2px 49px 0 rgba(0, 0, 0, 0.06);
+}
+
+#footer h3 {
+  font-size: 22px;
+}
+
+#footer a {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+#footer a:hover {
+  color: #00a0c6;
+  cursor: pointer;
+}
+.message{
+  width: 100%;
+  height: 50px;
+  color: yellow;
+}

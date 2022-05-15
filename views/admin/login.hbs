@@ -1,0 +1,19 @@
+<div class="container p-4" style="border: 2px solid rgb(243, 236, 236);width:300px;margin-top:100px">
+      {{#if data}}
+    <div>
+      <h5 style="color:red;"><b><i>Invalid UserName/Password</i></b></h5>
+    </div>
+    {{/if}}
+  <form method="post" action="/admin/login">
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" style="color:white">UserName</label>
+    <input type="text" name="user" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label" style="color:white">Password</label>
+    <input type="mail" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <button type="submit" style="width:100%" class="btn btn-outline-info">Login</button>
+</form>
+</div>

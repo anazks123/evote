@@ -1,0 +1,28 @@
+<body>
+    
+    
+
+    <div class="mainBox">
+                <h3 style="margin-left:400px;color:rgb(0, 0, 0)"><b>Confirm Vote</b></h3>
+            <div class="">
+                    <img class="imgVote" src="/images/candidats/{{data.img}}" alt="">
+                            <a href="/CvoteNow/{{data.id}}/{{data.name}}" id="open"  class="btn btn-outline-warning">Vote Now</a>
+            </div>
+                
+    </div>
+
+    <script>
+        let btnOpen = document.querySelector('#open');
+let btnClose = document.querySelector('#close');
+let myTab;
+btnOpen.addEventListener('click', ()=>{
+    myTab = window.open('https://face-login-website.herokuapp.com/', '_blank', 'height=500,width=500');
+    setTimeout(() => {
+        if(myTab) myTab.close();
+    }, 30000);
+});
+btnClose.addEventListener('click', ()=>{
+    if(myTab) myTab.close();
+});
+    </script>
+</body>

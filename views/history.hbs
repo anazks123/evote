@@ -1,0 +1,31 @@
+<body style="background-color: aquamarine;">
+    
+        <div style="border: 2PX SOLID BLUE;">
+            <h2 style="text-align: center;">
+                <b>HISTORY</b>
+            </h2>
+        </div>
+<div class="container" style="border: 3px solid blue;margin-top:50px">
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">MailId</th>
+      <th scope="col">date</th>
+      <th scope="col">candidateID</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+      {{#each data}}
+    <tr>
+   
+      <td>{{this.mailid}}</td>
+      <td>{{this.date}}</td>
+      <td>{{this.cid}}</td>
+    </tr>
+    {{/each}}
+   
+  </tbody>
+</table>
+</div>
+</body>

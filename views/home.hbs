@@ -1,0 +1,47 @@
+<body>
+    <a style="margin-left:600px;" href="/qrGen" class="btn btn-outline-warning">Genarate QR Code</a>
+      <div class="message">
+          {{#if message}}
+          {{message}}
+          {{/if}}
+      </div>
+ <div style="margin-left:200px;">
+
+
+    {{#each data}}
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card mb-1">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img style="height:100%;width:100%" src="/images/candidats/{{this.img}}" class="img-fluid rounded-start" alt="no img">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">{{This.party}}</p>
+        <p class="card-text"><small class="text-muted">{{this.Area}}</small></p>
+        <a href="/voteNow/{{this.id}}" class="btn btn-outline-success" id="open">Vote Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    {{/each}}
+   </div>
+   <script>
+     let btnOpen = document.querySelector('#open');
+let btnClose = document.querySelector('#close');
+let myTab;
+btnOpen.addEventListener('click', ()=>{
+    myTab = window.open('http://localhost:4000/loader', '_blank', 'height=500,width=500');
+    setTimeout(() => {
+        if(myTab) myTab.close();
+    }, 30000);
+});
+btnClose.addEventListener('click', ()=>{
+    if(myTab) myTab.close();
+});
+   </script>
+</body>

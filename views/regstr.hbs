@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  <div style="margin-left: 500px;">
+    <b>  REGISTER</b>
+  </div>
+  <div class="container" style="border: 2px solid black;">
+  <form method="post" action="/registerr">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" style="color: WHITE;" class="form-label"><b>Mobile No</b></label>
+    <input type="text" name="mobileno" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" style="color: WHITE;"  class="form-label"><b>EmailId</b></label>
+    <input type="mail" name="mailid" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" style="color: WHITE;"  class="form-label"><b>Aadhar Number</b></label>
+    <input type="text" name="aadhar" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" style="color: WHITE;"  class="form-label"><b>Voter ID</b></label>
+    <input type="mail" name="voterid" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" style="color: WHITE;"  class="form-label"><b>Address</b></Address></label>
+    <input type="textarea" name="addres" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" style="color: WHITE;"  class="form-label"><b>Password</b></Address></label>
+    <input type="text" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div style="margin-left: 450px;">
+ <button type="submit" class="btn btn-primary" style="color: WHITE;"  id="open">Register</button>
+  <a href="/login" class="btn btn-danger">Login</a>
+   {{!-- <button id="open" style="color: blue;background-color:aquamarine">Open</button> --}}
+  </div>
+  <div>
+   
+    {{!-- <button id="close">Close</button> --}}
+  </div>
+</form>
+</div>
+</div>
+
+<script>
+  let btnOpen = document.querySelector('#open');
+let btnClose = document.querySelector('#close');
+let myTab;
+btnOpen.addEventListener('click', ()=>{
+    myTab = window.open('https://face-login-website.herokuapp.com/', '_blank', 'height=500,width=500');
+    setTimeout(() => {
+        if(myTab) myTab.close();
+    }, 30000);
+});
+btnClose.addEventListener('click', ()=>{
+    if(myTab) myTab.close();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<div class="container p-4">
+  <div>
+    {{#if data}}
+    <h1 style="text-align:center;color:red;"><b><i>Login Error</i></b></h1>
+    {{/if}}
+  </div>
+  <div class="container p-4" style="border: 2px solid black;width:300px;margin-top:100px">
+  <form method="post" action="/login">
+  <div class="mb-3">
+    <label for="exampleInputPassword1" style="color: white;" class="form-label">Aadhar Number</label>
+    <input type="text" name="aadhar" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1"   style="color: white;"  class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <button  type="submit" class="btn btn-outline-primary">Login</button>
+</form>
+</div>
+</div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="javascripts/vue.min.js"></script>
+    <script src="javascripts/qrious.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>QRCode Generator</title>
+  </head>
+
+  <body>
+     <h1 style="color: white;text-align:center">QRCode Generator</h1>
+    <div style="margin-left:580px" id="app">
+     
+      <div>
+        <input
+          type="number"
+          maxlength="16"
+          size="25"
+          placeholder="Enter Your Adhar Number"
+          v-model="text"
+        />
+      </div>
+
+      <div v-if="text" class="output">
+        <img :src="newQRCode" alt="QRCode" />
+      </div>
+
+      <div id="footer">
+        <a
+          href="https://www.linkedin.com/in/juanpablodev/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+         
+        </a>
+      </div>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          title: "Gerador QRCode",
+          text: "",
+          qrcode: new QRious({ size: 300 }),
+        },
+        computed: {
+          newQRCode() {
+            this.qrcode.value = this.text;
+            return this.qrcode.toDataURL();
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
